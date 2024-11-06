@@ -1,0 +1,115 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Dependency directories
+node_modules/
+.pnp/
+.pnp.js
+
+# Build directories
+dist/
+dist-ssr/
+out/
+.build/
+
+# Vite cache
+.vite/
+
+# Local environment files
+*.local
+.env
+.env.*.local
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Editor directories and files
+.vscode/
+!.vscode/extensions.json
+.idea/
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# macOS
+._*
+.AppleDouble
+.LSOverride
+.DS_Store
+Icon
+__MACOSX/
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# Linux
+*~
+
+# npm cache
+.npm/
+
+# Yarn cache
+.yarn/*
+!.yarn/releases
+!.yarn/plugins
+!.yarn/sdks
+!.yarn/versions
+yarn.lock
+
+# Coverage files
+coverage/
+*.lcov
+*.clover
+
+# Compiled files
+*.pyc
+*.pyo
+*.exe
+*.out
+*.app
+*.dll
+*.o
+*.obj
+
+# Archives
+*.zip
+*.tar.gz
+*.rar
+*.7z
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.backup
+*.swp
+*.lock
+
+# IDE-specific files
+.idea/
+.project
+.classpath
+*.launch
+.settings/
+bin/
+tmp/
+
+# Log files
+*.log
+
+# GitHub Pages
+gh-pages/
