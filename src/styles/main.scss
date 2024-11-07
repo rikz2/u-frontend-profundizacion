@@ -71,6 +71,11 @@ body {
   }
 }
 
+
+//Interpolación en Valores de Texto con Variables Dinámicas
+$font-weight-nav: bold;
+$nav-link-color-hover: $gradient-hover;
+
 nav {
   background: $gradient-nav-footer;
 
@@ -85,6 +90,7 @@ nav {
     font-weight: $color-text-bold;
   }
   .nav-link {
+    font-weight: #{$font-weight-nav};
     width: fit-content;
     padding: 0px 1em;
     border-radius: 0.3em;
@@ -93,18 +99,26 @@ nav {
     cursor: pointer;
 
     &:hover {
-      background: $gradient-hover;
+      background: #{$nav-link-color-hover};
     }
   }
 }
 
-footer {
-  background: $gradient-nav-footer;
-  padding: 2em 1em;
+// Interpolación para temas
+$footer-themes: (
+  "light": $gradient-nav-footer,
+  "dark": linear-gradient(45deg, rgba(50, 50, 50, 1) 0%, rgba(80, 80, 80, 1) 100%)
+);
 
-  p {
-    text-align: center;
-    font-weight: bold;
+@each $theme, $background in $footer-themes {
+  .footer-#{$theme} {
+      background: $background;
+      padding: 2em 1em;
+
+      p {
+        text-align: center;
+        font-weight: bold;
+      }
   }
 }
 
@@ -179,11 +193,22 @@ footer {
       -webkit-mask-image: linear-gradient(to bottom, transparent, black 25%, black 75%, transparent 100%);
     }
   }
-  
-  .card {
-    box-shadow: none;
-    width: fit-content;
+  // Interpolación en Propiedades y Valores CSS
 
+  $box-shadow-light: 0px 8px 24px $color-shadow;
+  $box-shadow-dark: 0px 12px 28px $color-shadow;
+  $padding-default: 0px;
+
+  .card {
+    // box-shadow: none;
+    width: fit-content;
+    text-align: center;
+    box-shadow: #{$box-shadow-light};
+    padding: #{$padding-default};
+    &:hover {
+      box-shadow: #{$box-shadow-dark};
+      transform: scale(1.05);
+    }
     img {
       max-width: 100px;
     }

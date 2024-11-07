@@ -2,7 +2,7 @@
 import React from 'react';
 
 const FooterComponent: React.FC = () => (
-  <footer className="">
+  <footer className="footer-light">
     <p>
       Materia - Desarrollo de Software Web Frontend
       <br />
